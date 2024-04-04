@@ -1,0 +1,52 @@
+$darkBg: #111;
+$colorWhiteTheme: #646464;
+$colorDarkTheme: #b4b4b4;
+$justWhite: #eeeeee;
+$justBlack: #202020;
+
+body {
+  font-family: Archivo, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #fff;
+  color: $colorWhiteTheme;
+}
+
+.dark-mode body {
+  background-color: $darkBg;
+  color: $colorDarkTheme;
+}
+
+a {
+  color: $colorWhiteTheme;
+  font-weight: 600;
+  text-decoration: none;
+
+  &:hover {
+    color: $colorWhiteTheme;
+    text-decoration: none;
+  }
+}
+.dark-mode h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $justWhite;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $justBlack;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}

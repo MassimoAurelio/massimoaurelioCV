@@ -1,9 +1,9 @@
 <template>
   <NuxtLayout>
-        <NuxtPage />
+    <NuxtPage />
   </NuxtLayout>
 </template>
 
-<style scoped lang="scss">
-
+<style lang="scss">
+@import "@/assets/scss/global.scss";
 </style>
