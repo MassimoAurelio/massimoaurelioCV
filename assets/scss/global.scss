@@ -1,39 +1,58 @@
-$darkBg: #111;
-$colorWhiteTheme: #646464;
-$colorDarkTheme: #b4b4b4;
-$justWhite: #eeeeee;
-$justBlack: #202020;
+@use "@/assets/scss/_vars.scss" as vars;
 
-body {
+@mixin common-styles {
   font-family: Archivo, sans-serif;
   font-size: 16px;
   line-height: 1.5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  @include common-styles;
   background-color: #fff;
-  color: $colorWhiteTheme;
+  color: vars.$colorWhiteTheme;
 }
 
 .dark-mode body {
-  background-color: $darkBg;
-  color: $colorDarkTheme;
+  @include common-styles;
+  background-color: vars.$darkBg;
+  color: vars.$colorDarkTheme;
 }
 
 a {
-  color: $colorWhiteTheme;
+  color: vars.$colorWhiteTheme;
   font-weight: 600;
   text-decoration: none;
 
   &:hover {
-    color: $colorWhiteTheme;
+    color: vars.$justBlack;
     text-decoration: none;
   }
 }
+
+.dark-mode a {
+  color: vars.$colorDarkTheme;
+  font-weight: 600;
+  text-decoration: none;
+
+  &:hover {
+    color: vars.$justWhite;
+    text-decoration: none;
+  }
+}
+
 .dark-mode h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  color: $justWhite;
+  color: vars.$justWhite;
   font-weight: bold;
   margin-top: 0;
   margin-bottom: 1rem;
@@ -45,8 +64,13 @@ h3,
 h4,
 h5,
 h6 {
-  color: $justBlack;
+  color: vars.$justBlack;
   font-weight: bold;
   margin-top: 0;
   margin-bottom: 1rem;
 }
+
+
+ul, ol {
+  list-style-type: none;
+ }

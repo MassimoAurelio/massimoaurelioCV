@@ -6,6 +6,7 @@ export default defineNuxtConfig({
     "@nuxt/content",
     "@nuxtjs/color-mode",
     "shadcn-nuxt",
+    "@pinia/nuxt",
   ],
   css: ["@/assets/scss/global.scss"],
   colorMode: {
@@ -19,9 +20,6 @@ export default defineNuxtConfig({
     storageKey: "nuxt-color-mode",
   },
   shadcn: {
-    /**
-     * Prefix for all the imported component
-     */
     prefix: "Ui",
     /**
      * Directory that the component lives in.
