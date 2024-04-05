@@ -26,7 +26,7 @@ body {
 
 a {
   color: vars.$colorWhiteTheme;
-  font-weight: 600;
+  font-weight: 400;
   text-decoration: none;
 
   &:hover {
@@ -37,7 +37,29 @@ a {
 
 .dark-mode a {
   color: vars.$colorDarkTheme;
-  font-weight: 600;
+  font-weight: 400;
+  text-decoration: none;
+
+  &:hover {
+    color: vars.$justWhite;
+    text-decoration: none;
+  }
+}
+
+button {
+  color: vars.$colorWhiteTheme;
+  font-weight: 400;
+  text-decoration: none;
+
+  &:hover {
+    color: vars.$justBlack;
+    text-decoration: none;
+  }
+}
+
+.dark-mode button {
+  color: vars.$colorDarkTheme;
+  font-weight: 400;
   text-decoration: none;
 
   &:hover {
@@ -70,7 +92,7 @@ h6 {
   margin-bottom: 1rem;
 }
 
-
-ul, ol {
+ul,
+ol {
   list-style-type: none;
- }
+}

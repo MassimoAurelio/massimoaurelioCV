@@ -19,7 +19,6 @@
     "@vueuse/nuxt": "^10.9.0",
     "nuxi": "^3.11.1",
     "nuxt": "^3.11.1",
-    "nuxt-icons": "^3.2.1",
     "sass": "^1.72.0",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0"
@@ -28,6 +27,6 @@
     "@nuxtjs/color-mode": "^3.3.3",
     "@nuxtjs/style-resources": "^1.2.2",
     "eslint": "^8.57.0",
-    "shadcn-nuxt": "^0.10.2"
+    "nuxt-icon": "^0.6.10"
   }
 }

@@ -5,7 +5,7 @@
     <Container>
       <nav class="header__navigate">
         <div class="header__logo">
-          <Icon name="skill-icons:devto-dark" />
+          <Icon name="skill-icons:devto-dark" size="25" />
         </div>
         <div class="header__links">
           <HeaderLinks />
@@ -17,17 +17,20 @@
 </template>
 
 <style scoped lang="scss">
-.header__navigate {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px;
+.header {
+  width: 100%;
 
-  .header__links {
+  .header__navigate {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
+    justify-content: space-between;
+    padding: 20px;
+
+    .header__links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
   }
 }
 </style>
