@@ -2,8 +2,11 @@
 
 @mixin common-styles {
   font-family: Archivo, sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.5;
+}
+@mixin transition-ease {
+  transition: all 0.2s ease;
 }
 
 * {
@@ -39,6 +42,7 @@ a {
   color: vars.$colorDarkTheme;
   font-weight: 400;
   text-decoration: none;
+  @include transition-ease;
 
   &:hover {
     color: vars.$justWhite;
@@ -50,6 +54,7 @@ button {
   color: vars.$colorWhiteTheme;
   font-weight: 400;
   text-decoration: none;
+  @include transition-ease;
 
   &:hover {
     color: vars.$justBlack;
@@ -61,11 +66,20 @@ button {
   color: vars.$colorDarkTheme;
   font-weight: 400;
   text-decoration: none;
+  @include transition-ease;
 
   &:hover {
     color: vars.$justWhite;
     text-decoration: none;
   }
+}
+span {
+  color: vars.$justBlack;
+  @include transition-ease;
+}
+.dark-mode span {
+  color: vars.$justWhite;
+  @include transition-ease;
 }
 
 .dark-mode h1,

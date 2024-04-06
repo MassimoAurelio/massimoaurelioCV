@@ -5,7 +5,7 @@
     <Container>
       <nav class="header__navigate">
         <div class="header__logo">
-          <Icon name="skill-icons:devto-dark" size="25" />
+          <a href="/"><Icon name="skill-icons:devto-dark" size="25" /></a>
         </div>
         <div class="header__links">
           <HeaderLinks />
@@ -24,6 +24,11 @@
     display: flex;
     justify-content: space-between;
     padding: 20px;
+
+    .header__logo {
+      display: flex;
+      align-items: center;
+    }
 
     .header__links {
       display: flex;

@@ -3,3 +3,14 @@ $colorWhiteTheme: #646464;
 $colorDarkTheme: #b4b4b4;
 $justWhite: #eeeeee;
 $justBlack: #202020;
+$dropboxBg: #191919;
+
+
+@mixin common-styles {
+    font-family: Archivo, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  @mixin transition-ease {
+    transition: all 0.2s ease;
+  }

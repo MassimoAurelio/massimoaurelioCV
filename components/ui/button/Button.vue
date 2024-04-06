@@ -35,6 +35,10 @@ const classes = ["button", `color_${color}`, `size_${size}`];
   background-color: vars.$colorWhiteTheme;
 }
 
+.button.color_second {
+  background-color: vars.$darkBg;
+}
+
 .button.size_S {
   grid-gap: 4px;
   padding: 4px;
