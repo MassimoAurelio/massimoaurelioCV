@@ -5,12 +5,16 @@
     <Container>
       <nav class="header__navigate">
         <div class="header__logo">
-          <a href="/"><Icon name="skill-icons:devto-dark" size="25" /></a>
+          <a href="/">
+            <Icon name="skill-icons:devto-dark" size="25" />
+          </a>
         </div>
         <div class="header__links">
           <HeaderLinks />
         </div>
-        <div class="header__toggle-theme"><ToggleTheme /></div>
+        <div class="header__toggle-theme">
+          <ToggleTheme />
+        </div>
       </nav>
     </Container>
   </header>
@@ -38,4 +42,11 @@
     }
   }
 }
+
+@media (max-width: 600px) {
+  .header__links {
+    display: none !important;
+  }
+}
+
 </style>
