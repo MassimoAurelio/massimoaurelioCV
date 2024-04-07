@@ -1,7 +1,10 @@
 <script setup lang="ts">
-import { useToggleThemeStore } from "@/store/useToggleThemeStore";
+import { useHeaderNav } from "@/store/useHeaderNav";
 
-const toggleThemeStore = useToggleThemeStore();
+
+
+
+const headerNavStore = useHeaderNav();
 </script>
 
 <template>
@@ -10,13 +13,14 @@ const toggleThemeStore = useToggleThemeStore();
        <UiButton
          color="second"
          class="dropdown__button dropdown__button--second"
-         @click="toggleThemeStore.toggleDropDown"
+         @click="headerNavStore.toggleHeaderLinks"
        >
-         <Icon name="ph:moon-fill" size="25" />
+       Menu
+         <Icon name="ic:baseline-plus" size="25" />
        </UiButton>
-       <ul class="dropdown__list" v-show="toggleThemeStore.showDropDown">
-         <li class="dropdown__item" v-for="item in toggleThemeStore.item" :key="item.name">
-           <span><Icon name="charm:tick" size="20" /></span><span>{{ item.name }}</span>
+       <ul class="dropdown__list" v-show="headerNavStore.showHeaderLinks">
+         <li class="dropdown__item" v-for="item in headerNavStore.items" :key="item.label">
+           <span><Icon name="charm:tick" size="20" /></span><span>{{ item.label }}</span>
          </li>
        </ul>
      </div>
