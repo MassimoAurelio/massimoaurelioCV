@@ -1,7 +1,10 @@
 <script setup lang="ts">
 import { useToggleThemeStore } from "@/store/useToggleThemeStore";
-
 const toggleThemeStore = useToggleThemeStore();
+
+
+
+
 </script>
 
 <template>
@@ -14,7 +17,7 @@ const toggleThemeStore = useToggleThemeStore();
        >
          <Icon name="ph:moon-fill" size="25" />
        </UiButton>
-       <ul class="dropdown__list" v-show="toggleThemeStore.showDropDown">
+       <ul class="dropdown__list" v-show="toggleThemeStore.showDropDown" >
          <li class="dropdown__item" v-for="item in toggleThemeStore.item" :key="item.name">
            <span><Icon name="charm:tick" size="20" /></span><span>{{ item.name }}</span>
          </li>
@@ -45,6 +48,7 @@ const toggleThemeStore = useToggleThemeStore();
         border-radius: 12px;
         gap: 5px;
         padding: 10px;
+        cursor: pointer;
 
         &:hover {
           background-color: #2a2a2a;

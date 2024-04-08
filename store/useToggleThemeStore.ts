@@ -12,5 +12,6 @@ export const useToggleThemeStore = defineStore({
     toggleDropDown() {
       this.showDropDown = !this.showDropDown;
     },
+    
   },
 });

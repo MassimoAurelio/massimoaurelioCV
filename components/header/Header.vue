@@ -1,6 +1,5 @@
 <script setup lang="ts">
 
-// Инициализируем windowWidth с 0 или другим значением по умолчанию, если window не определен
 const windowWidth = ref(typeof window !== 'undefined' ? window.innerWidth : 0);
 
 const updateWindowWidth = () => {
@@ -72,6 +71,10 @@ onUnmounted(() => {
       align-items: center;
       justify-content: center;
       gap: 20px;
+    }
+
+    .mobile-header__links{
+      margin-left: auto;
     }
   }
 }
