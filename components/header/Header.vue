@@ -1,35 +1,33 @@
 <script setup lang="ts">
-import MobileHeaderLinks from './mobileHeaderLinks.vue';
+import ToggleTheme from "./ToggleTheme.vue";
+import MobileHeaderLink from "./MobileHeaderLinks";
 
-
-const windowWidth = ref(typeof window !== 'undefined' ? window.innerWidth : 0);
+const windowWidth = ref(typeof window !== "undefined" ? window.innerWidth : 0);
 
 const updateWindowWidth = () => {
- if (typeof window !== 'undefined') {
+  if (typeof window !== "undefined") {
     windowWidth.value = window.innerWidth;
- }
+  }
 };
 
 const isMobile = computed(() => windowWidth.value <= 600);
 
 onMounted(() => {
- if (typeof window !== 'undefined') {
-    window.addEventListener('resize', updateWindowWidth);
- }
+  if (typeof window !== "undefined") {
+    window.addEventListener("resize", updateWindowWidth);
+  }
 });
 
 onUnmounted(() => {
- if (typeof window !== 'undefined') {
-    window.removeEventListener('resize', updateWindowWidth);
- }
+  if (typeof window !== "undefined") {
+    window.removeEventListener("resize", updateWindowWidth);
+  }
 });
 </script>
 <template>
   <header class="header">
     <Container>
-
       <nav class="header__navigate">
-
         <div class="header__logo">
           <a href="/">
             <Icon name="skill-icons:devto-dark" size="25" />
@@ -40,16 +38,14 @@ onUnmounted(() => {
           <HeaderLinks />
         </div>
 
-        <div class="mobile-header__links" v-if="isMobile" >
-          <MobileHeaderLinks/>
+        <div class="mobile-header__links" v-if="isMobile">
+          <MobileHeaderLink />
         </div>
 
         <div class="header__toggle-theme">
           <ToggleTheme />
         </div>
-
       </nav>
-
     </Container>
   </header>
 </template>
@@ -61,7 +57,7 @@ onUnmounted(() => {
   .header__navigate {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    padding-top: 20px;
 
     .header__logo {
       display: flex;
@@ -75,7 +71,7 @@ onUnmounted(() => {
       gap: 20px;
     }
 
-    .mobile-header__links{
+    .mobile-header__links {
       margin-left: auto;
     }
   }
@@ -86,5 +82,4 @@ onUnmounted(() => {
     display: none !important;
   }
 }
-
 </style>

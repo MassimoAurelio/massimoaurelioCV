@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     "@nuxtjs/color-mode",
     "@pinia/nuxt",
     "nuxt-icon",
+    "@nuxt/image"
   ],
   css: ["@/assets/scss/global.scss"],
   colorMode: {

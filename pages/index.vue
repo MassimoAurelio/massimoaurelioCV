@@ -2,7 +2,8 @@
 
 <template>
   <div>
-    <Header />
-    
+    <Description />
   </div>
 </template>
+
+<style scoped lang="scss"></style>
