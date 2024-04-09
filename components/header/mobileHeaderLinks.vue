@@ -1,20 +1,7 @@
 <script setup lang="ts">
-import { useToggleThemeStore } from "@/store/useToggleThemeStore";
-const toggleThemeStore = useToggleThemeStore();
+import { useHeaderNav } from "@/store/useHeaderNav";
 
-const color = useColorMode();
-
-function toggleDark() {
-  color.value = "dark";
-}
-
-function toggleLight() {
-  color.value = "light";
-}
-
-const iconComputed = computed(() =>
-  color.value === "dark" ? "ph:moon-fill" : "ph:sun-fill"
-);
+const headerNavStore = useHeaderNav();
 </script>
 
 <template>
@@ -23,16 +10,19 @@ const iconComputed = computed(() =>
       <UiButton
         color="default"
         class="dropdown__button dropdown__button--second"
-        @click="toggleThemeStore.toggleDropDown"
+        @click="headerNavStore.toggleHeaderLinks"
       >
-        <Icon :name="iconComputed" size="25" />
+        Menu
+        <Icon name="ic:baseline-plus" size="25" />
       </UiButton>
-      <ul class="dropdown__list" v-show="toggleThemeStore.showDropDown">
-        <li class="dropdown__item" @click="toggleLight">
-          <span><Icon name="charm:tick" size="20" /></span><span>Light</span>
-        </li>
-        <li class="dropdown__item" @click="toggleDark">
-          <span><Icon name="charm:tick" size="20" /></span><span>Dark</span>
+      <ul class="dropdown__list" v-show="headerNavStore.showHeaderLinks">
+        <li
+          class="dropdown__item"
+          v-for="item in headerNavStore.items"
+          :key="item.label"
+        >
+          <span><Icon name="charm:tick" size="20" /></span
+          ><span>{{ item.label }}</span>
         </li>
       </ul>
     </div>
@@ -49,21 +39,21 @@ const iconComputed = computed(() =>
       position: absolute;
       min-width: 140px;
       margin-top: 10px;
+      border-radius: 12px;
       background-color: vars.$justWhite;
       box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
         0 4px 6px -4px rgba(0, 0, 0, 0.1);
-      border-radius: 12px;
       right: 0;
       padding: 10px;
 
       .dropdown__item {
         display: flex;
         align-items: center;
+        cursor: pointer;
         height: 36px;
         border-radius: 12px;
         gap: 5px;
         padding: 10px;
-        cursor: pointer;
 
         &:hover {
           background-color: #cecece;

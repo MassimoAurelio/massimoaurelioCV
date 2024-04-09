@@ -32,12 +32,13 @@ const classes = ["button", `color_${color}`, `size_${size}`];
 }
 
 .button.color_default {
-  background-color: vars.$colorWhiteTheme;
+  background-color: vars.$justWhite;
 }
 
-.button.color_second {
+.dark-mode .button.color_default{
   background-color: vars.$darkBg;
 }
+
 
 .button.size_S {
   grid-gap: 4px;

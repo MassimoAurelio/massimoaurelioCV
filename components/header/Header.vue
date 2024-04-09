@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import MobileHeaderLinks from './mobileHeaderLinks.vue';
+
 
 const windowWidth = ref(typeof window !== 'undefined' ? window.innerWidth : 0);
 
