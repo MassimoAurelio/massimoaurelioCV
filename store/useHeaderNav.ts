@@ -16,7 +16,7 @@ export const useHeaderNav = defineStore({
 
   actions: {
     toggleHeaderLinks() {
-      this.showHeaderLinks = !this.showHeaderLinks
-    }
-  }
+      this.showHeaderLinks = !this.showHeaderLinks;
+    },
+  },
 });

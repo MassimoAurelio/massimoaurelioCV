@@ -1,28 +1,25 @@
+<script setup lang="ts">
+import { useConnect } from "@/store/useConnectStore";
+
+const connectStore = useConnect();
+</script>
+
 <template>
   <section class="connect-container">
     <h1 class="connect">Connect</h1>
 
     <div>
       <ul class="grid_socials">
-        <li class="grid__items">
-          <a href=""
-            ><div><span></span>Email</div></a
-          >
-        </li>
-        <li class="grid__items">
-          <a href=""
-            ><div><span></span>YouTube</div></a
-          >
-        </li>
-        <li class="grid__items">
-          <a href=""
-            ><div><span></span>Instagram</div></a
-          >
-        </li>
-        <li class="grid__items">
-          <a href=""
-            ><div><span></span>GitHub</div></a
-          >
+        <li
+          class="grid__items"
+          v-for="item in connectStore?.items"
+          :key="item?.icon"
+        >
+          <Icon :name="item?.icon" size="25" />
+          <a :href="item?.href">
+            <span class="span">{{ item?.name }}</span>
+          </a>
+          <Icon name="ph:arrow-up-right-thin" size="25" />
         </li>
       </ul>
     </div>
@@ -30,6 +27,7 @@
 </template>
 
 <style scoped lang="scss">
+@use "@/assets/scss/_vars.scss" as vars;
 .connect-container {
   display: flex;
   gap: 2.25rem;
@@ -40,14 +38,23 @@
 
   .grid_socials {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
 
     .grid__items {
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      width: 100%;
       align-self: center;
-      border: 0.5px solid white;
-      padding: 20px;
+      min-height: 58px;
+      min-width: 240px;
+      border: 0.5px solid vars.$colorWhiteTheme;
+      border-width: 1px;
+      border-radius: 0.5rem;
+      padding: 1rem;
     }
   }
 }
