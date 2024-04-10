@@ -57,5 +57,20 @@ const connectStore = useConnect();
       padding: 1rem;
     }
   }
+
+  @media (max-width: 688px) {
+    .grid_socials {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-column-gap: 5px;
+      grid-row-gap: 5px;
+    }
+  }
+}
+@media (max-width: 688px) {
+  .connect-container {
+    display: flex;
+    flex-direction: column;
+  }
 }
 </style>

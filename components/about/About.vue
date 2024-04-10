@@ -1,4 +1,3 @@
-
 <template>
   <section class="about-container">
     <h1 class="about">About</h1>
@@ -27,8 +26,15 @@
   display: flex;
   gap: 2.25rem;
 
-  .about{
-    min-width: 150px
+  .about {
+    min-width: 150px;
+  }
+}
+
+@media (max-width: 688px) {
+  .about-container {
+    display: flex;
+    flex-direction: column;
   }
 }
 </style>
