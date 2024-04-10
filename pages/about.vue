@@ -2,6 +2,7 @@
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 import Connect from "@/components/about/Connect.vue";
+import Work from "@/components/about/Work.vue";
 </script>
 
 <template>
@@ -13,6 +14,7 @@ import Connect from "@/components/about/Connect.vue";
     <div class="about__items">
       <About />
       <Connect />
+      <Work />
     </div>
   </Container>
 </template>
