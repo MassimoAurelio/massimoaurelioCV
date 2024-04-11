@@ -7,12 +7,10 @@
         been coding for 5 years. As a software engineer, I specialize in
         full-stack web development and product design.
       </p>
-
       <p>
         In addition to coding, I create content on my channel, covering all
         things technology, coding vlogs, and personal development topics.
       </p>
-
       <p>
         When I'm not at my desk I am probably lifting weights, playing soccer,
         or at a local coffee shop :]

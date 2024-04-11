@@ -2,13 +2,20 @@ import xp from "@/public/101xp.jpg";
 import mint from "@/public/mint.jpg";
 import raketa from "@/public/raketa.png";
 
+interface IWork {
+  img: string;
+  position: string;
+  company: string;
+  time: string;
+}
+
 export const useWorkStore = defineStore({
   id: "work",
   state: () => ({
     items: [
       {
         img: mint,
-        position: "QA AUTOMATION", // Исправлено на position
+        position: "QA AUTOMATION",
         company: "Mint-Publishing",
         time: "2022 -",
       },
@@ -24,6 +31,6 @@ export const useWorkStore = defineStore({
         company: "101XP",
         time: "2022 - 2023",
       },
-    ],
+    ] as IWork[],
   }),
 });
