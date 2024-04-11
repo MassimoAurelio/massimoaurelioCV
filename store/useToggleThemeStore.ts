@@ -3,7 +3,6 @@ export const useToggleThemeStore = defineStore({
   state: () => ({
     item: [{ name: "Light" }, { name: "Dark" }],
     showDropDown: false,
-    
   }),
 
   actions: {

@@ -6,10 +6,9 @@ export const useWorkStore = defineStore({
   id: "work",
   state: () => ({
     items: [
-      ,
       {
         img: mint,
-        positon: "QA AUTOMATION",
+        position: "QA AUTOMATION", // Исправлено на position
         company: "Mint-Publishing",
         time: "2022 -",
       },

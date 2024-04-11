@@ -1,10 +1,14 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div>
+  <div class="layout-container">
     <Header />
     <slot />
   </div>
 </template>
 
-<style lang="scss"></style>
+<style lang="scss">
+.layout-container {
+  height: 100vh;
+}
+</style>

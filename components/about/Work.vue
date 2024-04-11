@@ -20,12 +20,17 @@ const workStore = useWorkStore();
           class="Work__item"
         >
           <a class="Work__link" href="">
-            <div class="Work__img">
-              <img :src="item?.img" alt="" />
+            <div class="Work__container">
+              <div class="Work__img">
+                <img :src="item?.img" alt="" />
+              </div>
+              <div>
+                <p>{{ item?.position }}</p>
+                <p>{{ item?.company }}</p>
+              </div>
             </div>
-            <time class="Work__time" :datetime="item?.time">{{
-              item?.time
-            }}</time>
+
+            <time class="Work__time">{{ item?.time }}</time>
           </a>
         </li>
       </ul>
@@ -37,19 +42,25 @@ const workStore = useWorkStore();
 .Work {
   display: flex;
   gap: 2.25rem;
+  padding-bottom: 5vh;
 
   .Work__description {
     min-width: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 2.25rem;
   }
 
   .Work__list {
     display: flex;
     flex-direction: column;
+    gap: 2vh;
 
     .Work__item {
       display: flex;
-      width: 488px;
-      height: 65px;
+      width: 100%;
+      max-width: 488px;
+      max-height: 65px;
       flex-direction: column;
 
       .Work__link {
@@ -57,15 +68,21 @@ const workStore = useWorkStore();
         align-items: center;
         justify-content: space-between;
         width: 100%;
-        .Work__img {
-          width: 48px;
-          height: 48px;
-          overflow: hidden;
-        }
-        .Work__img img {
-          width: 100%;
-          height: 100%;
-          object-fit: contain;
+
+        .Work__container {
+          display: flex;
+          align-items: center;
+          gap: 2vh;
+          .Work__img {
+            width: 48px;
+            height: 48px;
+            overflow: hidden;
+          }
+          .Work__img img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
         }
       }
     }
