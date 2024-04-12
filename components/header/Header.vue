@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import ToggleTheme from "./ToggleTheme.vue";
-import MobileHeaderLink from "./MobileHeaderLinks";
+import MobileHeaderLink from "./MobileHeaderLinks.vue";
 
-const windowWidth = ref(typeof window !== "undefined" ? window.innerWidth : 0);
+const windowWidth = ref(typeof window !== "undefined" ? window.innerWidth : null);
+
 
 const updateWindowWidth = () => {
   if (typeof window !== "undefined") {
@@ -10,7 +11,7 @@ const updateWindowWidth = () => {
   }
 };
 
-const isMobile = computed(() => windowWidth.value <= 600);
+const isMobile = computed(() => windowWidth.value !== null && windowWidth.value <= 600);
 
 onMounted(() => {
   if (typeof window !== "undefined") {
@@ -25,7 +26,7 @@ onUnmounted(() => {
 });
 </script>
 <template>
-  <header class="header">
+  <header class="header" v-cloak>
     <Container>
       <nav class="header__navigate">
         <div class="header__logo">
@@ -37,7 +38,6 @@ onUnmounted(() => {
         <div class="header__links">
           <HeaderLinks />
         </div>
-
         <div class="mobile-header__links" v-if="isMobile">
           <MobileHeaderLink />
         </div>
@@ -51,6 +51,9 @@ onUnmounted(() => {
 </template>
 
 <style scoped lang="scss">
+[v-cloak] {
+  display: none;
+}
 .header {
   width: 100%;
 
@@ -58,6 +61,7 @@ onUnmounted(() => {
     display: flex;
     justify-content: space-between;
     padding-top: 20px;
+    min-width: 320px;
 
     .header__logo {
       display: flex;
@@ -69,10 +73,12 @@ onUnmounted(() => {
       align-items: center;
       justify-content: center;
       gap: 20px;
+      flex-shrink: 0;
     }
 
     .mobile-header__links {
       margin-left: auto;
+      flex-shrink: 0;
     }
   }
 }

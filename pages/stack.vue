@@ -14,7 +14,7 @@ const stackStore = useStackStore();
           class="stack__list"
         >
           <li class="stack__item">
-            <Icon :name="item?.img" size="28"></Icon>
+            <Icon :name="item?.img" size="28" />
             <p>{{ item?.name }}</p>
           </li>
         </ul>
@@ -25,6 +25,8 @@ const stackStore = useStackStore();
 
 <style lang="scss">
 @use "@/assets/scss/_vars.scss" as vars;
+
+
 .stack_container {
   padding-top: 5rem;
   padding-bottom: 5rem;
@@ -36,10 +38,10 @@ const stackStore = useStackStore();
     grid-row-gap: 5px;
     .stack__list {
       .stack__item {
+        @include vars.borders;
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: vars.$customGray;
         cursor: pointer;
         border-radius: 0.5rem;
         gap: 1vh;
@@ -47,11 +49,7 @@ const stackStore = useStackStore();
         min-width: 100px;
         width: 100%;
       }
-      .dark-mode .stack__item {
-    background-color: vars.$justWhite;
-  }
     }
   }
-  
 }
 </style>

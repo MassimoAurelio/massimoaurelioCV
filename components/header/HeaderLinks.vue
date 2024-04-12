@@ -12,4 +12,13 @@ const headerNavStore = useHeaderNav();
   </ul>
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.navigate {
+  display: flex;
+  flex-shrink: 0; // Предотвращает уменьшение размера
+}
+
+.navigate__item {
+  flex-shrink: 0; // Предотвращает уменьшение размера
+}
+</style>

@@ -18,11 +18,13 @@ const headerNavStore = useHeaderNav();
       <ul class="dropdown__list" v-show="headerNavStore.showHeaderLinks">
         <li
           class="dropdown__item"
-          v-for="item in headerNavStore.items"
-          :key="item.label"
+          v-for="item in headerNavStore?.items"
+          :key="item?.label"
         >
-          <span><Icon name="charm:tick" size="20" /></span
-          ><span>{{ item.label }}</span>
+          <a :href="item?.href">
+            <span><Icon name="charm:tick" size="20" /></span
+            ><span>{{ item?.label }}</span></a
+          >
         </li>
       </ul>
     </div>
