@@ -1,20 +1,17 @@
 <script setup lang="ts">
-import { useToggleThemeStore } from "@/store/useToggleThemeStore";
-const toggleThemeStore = useToggleThemeStore();
-
 const color = useColorMode();
-
-function toggleDark() {
-  color.value = "dark";
-}
-
-function toggleLight() {
-  color.value = "light";
-}
 
 const iconComputed = computed(() =>
   color.value === "dark" ? "ph:moon-fill" : "ph:sun-fill"
 );
+
+const colorMode = useColorMode();
+const toggleDropdown = ref(false);
+
+function setTheme(theme: string) {
+  colorMode.preference = theme;
+  toggleDropdown.value = false;
+}
 </script>
 
 <template>
@@ -23,15 +20,15 @@ const iconComputed = computed(() =>
       <UiButton
         color="default"
         class="dropdown__button dropdown__button--second"
-        @click="toggleThemeStore.toggleDropDown"
+        @click="toggleDropdown = !toggleDropdown"
       >
         <Icon :name="iconComputed" size="25" />
       </UiButton>
-      <ul class="dropdown__list" v-show="toggleThemeStore.showDropDown">
-        <li class="dropdown__item" @click="toggleLight">
+      <ul class="dropdown__list" v-show="toggleDropdown">
+        <li class="dropdown__item" @click="setTheme('light')">
           <span><Icon name="charm:tick" size="20" /></span><span>Light</span>
         </li>
-        <li class="dropdown__item" @click="toggleDark">
+        <li class="dropdown__item" @click="setTheme('dark')">
           <span><Icon name="charm:tick" size="20" /></span><span>Dark</span>
         </li>
       </ul>

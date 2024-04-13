@@ -26,7 +26,7 @@ onUnmounted(() => {
 });
 </script>
 <template>
-  <header class="header" v-cloak>
+  <header class="header">
     <Container>
       <nav class="header__navigate">
         <div class="header__logo">

@@ -7,7 +7,7 @@ export default defineNuxtConfig({
     "@nuxtjs/color-mode",
     "@pinia/nuxt",
     "nuxt-icon",
-    "@nuxt/image"
+    "@nuxt/image",
   ],
   css: ["@/assets/scss/global.scss"],
   colorMode: {
@@ -20,5 +20,5 @@ export default defineNuxtConfig({
     classSuffix: "-mode",
     storageKey: "nuxt-color-mode",
   },
-  
+  ssr: false,
 });
