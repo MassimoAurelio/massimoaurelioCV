@@ -11,7 +11,7 @@ const connectStore = useConnect();
     <div>
       <ul class="grid_socials">
         <li v-for="item in connectStore?.items" :key="item?.icon">
-          <a class="grid__items" :href="item?.href">
+          <a class="grid__items" :href="item?.href" target="_blank">
             <Icon :name="item?.icon" size="25" />
 
             <span class="span">{{ item?.name }}</span>

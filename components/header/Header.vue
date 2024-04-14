@@ -2,8 +2,9 @@
 import ToggleTheme from "./ToggleTheme.vue";
 import MobileHeaderLink from "./MobileHeaderLinks.vue";
 
-const windowWidth = ref(typeof window !== "undefined" ? window.innerWidth : null);
-
+const windowWidth = ref(
+  typeof window !== "undefined" ? window.innerWidth : null
+);
 
 const updateWindowWidth = () => {
   if (typeof window !== "undefined") {
@@ -11,7 +12,9 @@ const updateWindowWidth = () => {
   }
 };
 
-const isMobile = computed(() => windowWidth.value !== null && windowWidth.value <= 600);
+const isMobile = computed(
+  () => windowWidth.value !== null && windowWidth.value <= 600
+);
 
 onMounted(() => {
   if (typeof window !== "undefined") {

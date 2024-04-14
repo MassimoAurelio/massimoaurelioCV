@@ -17,7 +17,7 @@ export const useConnect = defineStore({
       },
       {
         name: "Telegram",
-        href: "/",
+        href: "https://t.me/massimoaurelio",
         icon: "la:telegram",
         arrow: "ph:arrow-up-right-thin",
       },
@@ -29,13 +29,13 @@ export const useConnect = defineStore({
       },
       {
         name: "GitHub",
-        href: "/",
+        href: "https://github.com/MassimoAurelio",
         icon: "mdi:github",
         arrow: "ph:arrow-up-right-thin",
       },
       {
         name: "CodeWars",
-        href: "/",
+        href: "https://www.codewars.com/users/MassimoAurelio",
         icon: "cib:codewars",
         arrow: "ph:arrow-up-right-thin",
       },

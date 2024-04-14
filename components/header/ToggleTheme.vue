@@ -6,12 +6,13 @@ const iconComputed = computed(() =>
 );
 
 const colorMode = useColorMode();
+
 const toggleDropdown = ref(false);
 
-function setTheme(theme: string) {
+const setTheme = (theme: string) => {
   colorMode.preference = theme;
   toggleDropdown.value = false;
-}
+};
 </script>
 
 <template>
@@ -24,7 +25,7 @@ function setTheme(theme: string) {
       >
         <Icon :name="iconComputed" size="25" />
       </UiButton>
-      <ul class="dropdown__list" v-show="toggleDropdown">
+      <ul class="dropdown__list" v-if="toggleDropdown">
         <li class="dropdown__item" @click="setTheme('light')">
           <span><Icon name="charm:tick" size="20" /></span><span>Light</span>
         </li>
@@ -41,6 +42,7 @@ function setTheme(theme: string) {
 .dropdown {
   .dropdown__box {
     position: relative;
+    z-index: 1000;
 
     .dropdown__list {
       position: absolute;

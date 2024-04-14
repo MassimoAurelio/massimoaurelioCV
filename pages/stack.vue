@@ -4,28 +4,21 @@ const stackStore = useStackStore();
 </script>
 
 <template>
-  <Container>
-    <div class="stack_container">
-      <h1>Stack</h1>
-      <div class="stack__block">
-        <ul
-          v-for="item in stackStore.items"
-          :key="item.img"
-          class="stack__list"
-        >
-          <li class="stack__item">
-            <Icon :name="item?.img" size="28" />
-            <p>{{ item?.name }}</p>
-          </li>
-        </ul>
-      </div>
+  <div class="stack_container">
+    <h1>Stack</h1>
+    <div class="stack__block">
+      <ul v-for="item in stackStore.items" :key="item.img" class="stack__list">
+        <li class="stack__item">
+          <Icon :name="item?.img" size="28" />
+          <p>{{ item?.name }}</p>
+        </li>
+      </ul>
     </div>
-  </Container>
+  </div>
 </template>
 
 <style lang="scss">
 @use "@/assets/scss/_vars.scss" as vars;
-
 
 .stack_container {
   padding-top: 5rem;

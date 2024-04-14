@@ -1,7 +1,6 @@
 <script setup lang="ts"></script>
 
 <template>
-  <Container>
     <div class="about__container">
       <div class="about__avatar">
         <NuxtImg class="about__avatar-img" src="/myphoto.jpg" />
@@ -15,7 +14,6 @@
         </p>
       </div>
     </div>
-  </Container>
 </template>
 
 <style scoped lang="scss">

@@ -6,8 +6,8 @@ import Work from "@/components/about/Work.vue";
 </script>
 
 <template>
-  <Container>
-    <div class="about_container">
+  <div class="about_container">
+    <div class="about_header">
       <h1>About</h1>
       <p>Just a quick glimpse.</p>
     </div>
@@ -16,18 +16,19 @@ import Work from "@/components/about/Work.vue";
       <Connect />
       <Work />
     </div>
-  </Container>
+  </div>
 </template>
 
 <style lang="scss" scoped>
 .about_container {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-}
-
-.about__items {
   display: flex;
   flex-direction: column;
   gap: 5vh;
+
+  .about__items {
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+  }
 }
 </style>
