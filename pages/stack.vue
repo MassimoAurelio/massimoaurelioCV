@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import { useStackStore } from "@/store/useStackStore";
 const stackStore = useStackStore();
+
+useSeoMeta({
+  title: "Stack | Massimo Aurelio",
+});
 </script>
 
 <template>
@@ -21,8 +25,6 @@ const stackStore = useStackStore();
 @use "@/assets/scss/_vars.scss" as vars;
 
 .stack_container {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
 
   .stack__block {
     display: grid;

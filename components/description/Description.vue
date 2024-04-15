@@ -21,7 +21,6 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  padding-top: 5rem;
 
   .about__avatar {
     width: 100px;

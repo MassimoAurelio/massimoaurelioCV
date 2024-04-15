@@ -3,6 +3,10 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 import Connect from "@/components/about/Connect.vue";
 import Work from "@/components/about/Work.vue";
+
+useSeoMeta({
+  title: "About | Massimo Aurelio",
+});
 </script>
 
 <template>

@@ -33,8 +33,8 @@ onUnmounted(() => {
     <Container>
       <nav class="header__navigate">
         <div class="header__logo">
-          <a href="/">
-            <Icon name="skill-icons:devto-dark" size="25" />
+          <a href="/" class="header__icon">
+            <NuxtImg src="/headerIcon.png" sizes="25" />
           </a>
         </div>
 
@@ -62,6 +62,7 @@ onUnmounted(() => {
 
   .header__navigate {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     padding-top: 20px;
     min-width: 320px;
@@ -69,6 +70,11 @@ onUnmounted(() => {
     .header__logo {
       display: flex;
       align-items: center;
+
+      .header__icon {
+        display: flex;
+        align-items: center;
+      }
     }
 
     .header__links {

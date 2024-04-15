@@ -2,6 +2,10 @@
 import { useProjectStore } from "@/store/useProjectStore";
 
 const projectStore = useProjectStore();
+
+useSeoMeta({
+  title: "Projects | Massimo Aurelio",
+});
 </script>
 
 <template>
