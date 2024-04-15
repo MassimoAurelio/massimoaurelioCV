@@ -40,6 +40,7 @@ const setTheme = (theme: string) => {
 <style scoped lang="scss">
 @use "@/assets/scss/_vars.scss" as vars;
 .dropdown {
+  transition: all 0.5s ease;
   .dropdown__box {
     position: relative;
     z-index: 1000;
@@ -52,6 +53,7 @@ const setTheme = (theme: string) => {
       box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
         0 4px 6px -4px rgba(0, 0, 0, 0.1);
       border-radius: 12px;
+
       right: 0;
       padding: 10px;
 

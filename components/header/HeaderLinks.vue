@@ -15,10 +15,10 @@ const headerNavStore = useHeaderNav();
 <style scoped lang="scss">
 .navigate {
   display: flex;
-  flex-shrink: 0; // Предотвращает уменьшение размера
+  flex-shrink: 0; 
 }
 
 .navigate__item {
-  flex-shrink: 0; // Предотвращает уменьшение размера
+  flex-shrink: 0; 
 }
 </style>

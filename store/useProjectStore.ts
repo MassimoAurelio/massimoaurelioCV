@@ -26,6 +26,14 @@ export const useProjectStore = defineStore({
         description:
           "Designing and developing Internal software used to manage the companies $95.79 billion of dollars in private real-estate assets.",
       },
+      {
+        name: "CRM",
+        href: "https://github.com/MassimoAurelio/CRM",
+        src: "/crm.jpg",
+        time: "2024",
+        description:
+          "Designing and developing Internal software used to manage the companies $95.79 billion of dollars in private real-estate assets.",
+      },
     ] as IProject[],
   }),
 });

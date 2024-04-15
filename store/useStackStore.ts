@@ -3,18 +3,38 @@ interface IStack {
   img: string;
 }
 
+export const useAutomationStore = defineStore({
+  id: "automation",
+  state: () => ({
+    items: [
+      { name: "Java", img: "cib:java" },
+      { name: "Maven", img: "devicon-plain:maven-wordmark" },
+      { name: "Gradle", img: "cib:gradle" },
+      { name: "Selenium", img: "simple-icons:selenium" },
+      { name: "Playwright", img: "devicon-plain:playwright" },
+      { name: "Postman", img: "cib:postman" },
+      { name: "Jenkins", img: "devicon-plain:jenkins" },
+      { name: "Junit 5", img: "devicon-plain:junit-wordmark" },
+      { name: "REST Assured", img: "dashicons:rest-api" },
+    ],
+  }),
+});
+
 export const useStackStore = defineStore({
   id: "stack",
   state: () => ({
     items: [
       { name: "JavaScript", img: "cib:js" },
       { name: "TypeScript", img: "cib:typescript" },
+      { name: "HTML", img: "ic:baseline-html" },
+      { name: "CSS", img: "ic:round-css" },
+      { name: "Tailwind", img: "bxl:tailwind-css" },
       { name: "Vue", img: "cib:vue-js" },
       { name: "Nuxt3", img: "cib:nuxt-js" },
-      { name: "Java", img: "cib:java" },
-      { name: "Maven", img: "devicon-plain:maven-wordmark" },
-      { name: "Selenium", img: "simple-icons:selenium" },
-      { name: "playwright", img: "devicon-plain:playwright" },
+      { name: "Vite", img: "tabler:brand-vite" },
+      { name: "yarn", img: "tabler:brand-yarn" },
+      { name: "npm", img: "cib:npm" },
+      { name: "vitest", img: "devicon-plain:vitest" },
     ] as IStack[],
   }),
 });

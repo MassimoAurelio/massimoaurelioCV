@@ -1,7 +1,7 @@
 @use "@/assets/scss/_vars.scss" as vars;
 
 @mixin common-styles {
-  font-family: Archivo, sans-serif;
+  font-family: Montserra, sans-serif;
   font-size: 14px;
   line-height: 1.5;
 }
@@ -13,6 +13,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  @include transition-ease;
 }
 
 body {
@@ -35,6 +36,7 @@ a {
   &:hover {
     color: vars.$justBlack;
     text-decoration: none;
+   
   }
 }
 
@@ -42,7 +44,7 @@ a {
   color: vars.$colorDarkTheme;
   font-weight: 400;
   text-decoration: none;
-  @include transition-ease;
+ 
 
   &:hover {
     color: vars.$justWhite;
@@ -54,7 +56,7 @@ button {
   color: vars.$colorWhiteTheme;
   font-weight: 400;
   text-decoration: none;
-  @include transition-ease;
+
 
   &:hover {
     color: vars.$justBlack;
@@ -66,7 +68,7 @@ button {
   color: vars.$colorDarkTheme;
   font-weight: 400;
   text-decoration: none;
-  @include transition-ease;
+
 
   &:hover {
     color: vars.$justWhite;
@@ -75,11 +77,10 @@ button {
 }
 span {
   color: vars.$justBlack;
-  @include transition-ease;
+
 }
 .dark-mode span {
   color: vars.$justWhite;
-  @include transition-ease;
 }
 
 .dark-mode h1,

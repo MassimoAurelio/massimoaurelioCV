@@ -1,15 +1,17 @@
 <template>
   <section class="about-container">
     <h1 class="about">About</h1>
-    <div>
+    <div class="about_text">
       <p>
-        Hi, I'm Brian, born in Honduras and currently living in Houston. I have
-        been coding for 5 years. As a software engineer, I specialize in
-        full-stack web development and product design.
+        Hello, I'm Maxim, currently residing in Irkutsk. I have been engaged in
+        programming for the past two years. As a programmer, my expertise lies
+        in web development and automated testing.
       </p>
       <p>
-        In addition to coding, I create content on my channel, covering all
-        things technology, coding vlogs, and personal development topics.
+        In my free time from work, I enjoy working on pet projects or learning
+        something new to expand my technological stack. When I'm not sitting at
+        my desk, I'm likely walking, playing football, or at a local coffee shop
+        :)
       </p>
       <p>
         When I'm not at my desk I am probably lifting weights, playing soccer,
@@ -26,6 +28,11 @@
 
   .about {
     min-width: 150px;
+  }
+  .about_text {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
   }
 }
 

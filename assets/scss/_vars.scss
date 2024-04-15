@@ -11,10 +11,10 @@ $dropboxBg: #191919;
   font-size: 14px;
   line-height: 1.5;
 }
-@mixin transition-ease {
+/* @mixin transition-ease {
   transition: all 0.2s ease;
 }
-
+ */
 @mixin borders {
   border: 0.5px solid $colorWhiteTheme;
   border-width: 1px;

@@ -20,13 +20,9 @@ useSeoMeta({
         v-for="item in projectStore?.items"
         :key="item?.href"
       >
-        <a :href="item?.href">
-          <div class="project__img">
-            <NuxtImg
-              :src="item?.src"
-              loading="lazy"
-              class="project__img-image"
-            />
+        <a :href="item?.href" class="project__img" target="_blank">
+          <div>
+            <NuxtImg :src="item?.src" class="project__img-image" />
           </div>
         </a>
         <div>
@@ -50,9 +46,6 @@ useSeoMeta({
   flex-direction: column;
   gap: 5vh;
 
-  .project__header {
-  }
-
   .project__list {
     display: flex;
     flex-direction: column;
@@ -64,6 +57,7 @@ useSeoMeta({
 
       .project__img img {
         max-width: 250px;
+        border-radius: 15px;
         max-height: 130px;
         object-fit: cover;
       }
