@@ -65,10 +65,6 @@ useSeoMeta({
       .project__info {
         display: flex;
         gap: 2vh;
-        .project__name {
-          color: vars.$justWhite;
-          font-weight: 700;
-        }
       }
     }
   }

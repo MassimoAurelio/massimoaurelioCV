@@ -65,10 +65,12 @@ button {
     text-decoration: none;
   }
 }
+
 span {
   color: vars.$justBlack;
   @include vars.transition-ease;
 }
+
 .dark-mode span {
   color: vars.$justWhite;
   @include vars.transition-ease;
