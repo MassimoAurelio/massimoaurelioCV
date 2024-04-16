@@ -73,4 +73,12 @@ useSeoMeta({
     }
   }
 }
+
+@media (max-width: 688px) {
+  .project__item {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+  }
+}
 </style>

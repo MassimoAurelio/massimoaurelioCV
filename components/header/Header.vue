@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import ToggleTheme from "./ToggleTheme.vue";
-import MobileHeaderLink from "./MobileHeaderLinks.vue";
+/* import MobileHeaderLink from "../MobileHeaderLinks.vue"; */
 
-const windowWidth = ref(
-  typeof window !== "undefined" ? window.innerWidth : null
-);
+const windowWidth = ref<number | null>(null);
 
 const updateWindowWidth = () => {
   if (typeof window !== "undefined") {
-    windowWidth.value = window.innerWidth;
+    const width = window.innerWidth;
+    windowWidth.value = width;
+    sessionStorage.setItem("windowWidth", width.toString());
   }
 };
 
@@ -17,9 +17,12 @@ const isMobile = computed(
 );
 
 onBeforeMount(() => {
- if (typeof window !== "undefined") {
+  const storedWidth = sessionStorage.getItem("windowWidth");
+  if (storedWidth) {
+    windowWidth.value = parseInt(storedWidth, 10);
+  } else {
     updateWindowWidth();
- }
+  }
 });
 
 onMounted(() => {
@@ -49,7 +52,7 @@ onUnmounted(() => {
           <HeaderLinks />
         </div>
         <div class="mobile-header__links" v-show="isMobile" v-cloak>
-          <MobileHeaderLink />
+          <MobileHeaderLinks />
         </div>
 
         <div class="header__toggle-theme">
@@ -96,7 +99,6 @@ onUnmounted(() => {
       margin-left: auto;
       flex-shrink: 0;
     }
-   
   }
 }
 
