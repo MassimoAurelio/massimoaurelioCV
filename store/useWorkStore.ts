@@ -7,6 +7,7 @@ interface IWork {
   position: string;
   company: string;
   time: string;
+  url: string;
 }
 
 export const useWorkStore = defineStore({
@@ -24,12 +25,14 @@ export const useWorkStore = defineStore({
         position: "QA ENGINEER",
         company: "RAKETA",
         time: "2022 - 2023",
+        url: "https://raketa.travel/ru",
       },
       {
         img: xp,
         position: "QA ENGINEER",
         company: "101XP",
         time: "2022 - 2023",
+        url: "https://101xp.com/?ysclid=lv2b2h10ox649545335",
       },
     ] as IWork[],
   }),

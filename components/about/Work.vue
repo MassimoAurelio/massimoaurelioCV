@@ -9,9 +9,9 @@ const workStore = useWorkStore();
     <h1 class="Work__header">Work</h1>
     <div class="Work__description">
       <p>
-        I specialize in Python, data analytics, React, web development, UI/UX,
-        and product design. But I am always learning new things. Here are some
-        of the places I have worked.
+        I specialize in Java and JavaScript, testing, Vue(Nuxt), web
+        development, user interface, and product design. But I'm always learning
+        something new. Here are some of the places where I have worked
       </p>
       <ul class="Work__list">
         <li
@@ -19,7 +19,7 @@ const workStore = useWorkStore();
           :key="item?.img"
           class="Work__item"
         >
-          <a class="Work__link" href="">
+          <a class="Work__link" :href="item?.url" target="_blank">
             <div class="Work__container">
               <div class="Work__img">
                 <img :src="item?.img" alt="" />
