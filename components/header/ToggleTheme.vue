@@ -27,10 +27,20 @@ const setTheme = (theme: string) => {
       </UiButton>
       <ul class="dropdown__list" v-if="toggleDropdown">
         <li class="dropdown__item" @click="setTheme('light')">
-          <span><Icon name="charm:tick" size="20" /></span><span>Light</span>
+          <span class="dropdown__check"
+            ><Icon
+              v-show="color.value === 'light'"
+              name="charm:tick"
+              size="20" /></span
+          ><span class="dropdown__text">Light</span>
         </li>
         <li class="dropdown__item" @click="setTheme('dark')">
-          <span><Icon name="charm:tick" size="20" /></span><span>Dark</span>
+          <span class="dropdown__check"
+            ><Icon
+              v-show="color.value === 'dark'"
+              name="charm:tick"
+              size="20" /></span
+          ><span class="dropdown__text">Dark</span>
         </li>
       </ul>
     </div>
@@ -40,7 +50,6 @@ const setTheme = (theme: string) => {
 <style scoped lang="scss">
 @use "@/assets/scss/_vars.scss" as vars;
 .dropdown {
-  transition: all 0.5s ease;
   .dropdown__box {
     position: relative;
     z-index: 1000;
@@ -53,21 +62,30 @@ const setTheme = (theme: string) => {
       box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
         0 4px 6px -4px rgba(0, 0, 0, 0.1);
       border-radius: 12px;
-
       right: 0;
       padding: 10px;
 
       .dropdown__item {
+        position: relative;
         display: flex;
         align-items: center;
         height: 36px;
         border-radius: 12px;
         gap: 5px;
-        padding: 10px;
+        padding-right: 1rem;
+        padding-left: 2rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
         cursor: pointer;
 
         &:hover {
           background-color: #cecece;
+        }
+
+        .dropdown__check {
+          position: absolute;
+          left: 0;
+          padding-left: 0.5vh;
         }
       }
     }

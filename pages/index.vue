@@ -6,6 +6,7 @@ useSeoMeta({
 
 <template>
   <div class="about__container">
+    <h1>{{ $route.params.id }}</h1>
     <div class="about__avatar">
       <NuxtImg class="about__avatar-img" src="/myphoto.jpg" />
     </div>
@@ -28,8 +29,8 @@ useSeoMeta({
   gap: 2rem;
 
   .about__avatar {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     overflow: hidden;
 
     .about__avatar-img {

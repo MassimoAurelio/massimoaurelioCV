@@ -49,10 +49,12 @@ const connectStore = useConnect();
       align-self: center;
       min-height: 58px;
       min-width: 240px;
-      border: 0.5px solid vars.$colorWhiteTheme;
-      border-width: 1px;
-      border-radius: 0.5rem;
+      @include vars.borders;
       padding: 1rem;
+
+      &:hover {
+        @include vars.bordersHover;
+      }
     }
   }
 

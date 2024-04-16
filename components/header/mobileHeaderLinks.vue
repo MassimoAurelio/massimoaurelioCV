@@ -2,6 +2,12 @@
 import { useHeaderNav } from "@/store/useHeaderNav";
 
 const headerNavStore = useHeaderNav();
+
+const route = useRoute();
+const routePath = computed(() => {
+  const pathWithoutSlash = route.path.replace(/^\//, "");
+  return pathWithoutSlash.charAt(0).toUpperCase() + pathWithoutSlash.slice(1);
+});
 </script>
 
 <template>
@@ -22,7 +28,11 @@ const headerNavStore = useHeaderNav();
           :key="item?.label"
         >
           <a :href="item?.href">
-            <span><Icon name="charm:tick" size="20" /></span
+            <span class="dropdown__check"
+              ><Icon
+                v-if="routePath === item?.label"
+                name="charm:tick"
+                size="20" /></span
             ><span>{{ item?.label }}</span></a
           >
         </li>
@@ -42,6 +52,7 @@ const headerNavStore = useHeaderNav();
       min-width: 140px;
       margin-top: 10px;
       border-radius: 12px;
+      z-index: 10000;
       background-color: vars.$justWhite;
       box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
         0 4px 6px -4px rgba(0, 0, 0, 0.1);
@@ -49,16 +60,26 @@ const headerNavStore = useHeaderNav();
       padding: 10px;
 
       .dropdown__item {
+        position: relative;
         display: flex;
         align-items: center;
         cursor: pointer;
         height: 36px;
         border-radius: 12px;
         gap: 5px;
-        padding: 10px;
+        padding-right: 1rem;
+        padding-left: 2rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
 
         &:hover {
           background-color: #cecece;
+        }
+
+        .dropdown__check {
+          position: absolute;
+          left: 0;
+          padding-left: 0.5vh;
         }
       }
     }

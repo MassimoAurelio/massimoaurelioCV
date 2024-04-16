@@ -69,6 +69,10 @@ useSeoMeta({
         padding: 1vh;
         min-width: 100px;
         width: 100%;
+        &:hover {
+          @include vars.transition-ease;
+          @include vars.bordersHover;
+        }
       }
     }
   }

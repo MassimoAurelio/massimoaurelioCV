@@ -16,6 +16,12 @@ const isMobile = computed(
   () => windowWidth.value !== null && windowWidth.value <= 600
 );
 
+onBeforeMount(() => {
+ if (typeof window !== "undefined") {
+    updateWindowWidth();
+ }
+});
+
 onMounted(() => {
   if (typeof window !== "undefined") {
     window.addEventListener("resize", updateWindowWidth);
@@ -28,6 +34,7 @@ onUnmounted(() => {
   }
 });
 </script>
+
 <template>
   <header class="header">
     <Container>
@@ -41,7 +48,7 @@ onUnmounted(() => {
         <div class="header__links">
           <HeaderLinks />
         </div>
-        <div class="mobile-header__links" v-if="isMobile">
+        <div class="mobile-header__links" v-show="isMobile" v-cloak>
           <MobileHeaderLink />
         </div>
 

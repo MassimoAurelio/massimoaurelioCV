@@ -45,7 +45,6 @@ export const useConnect = defineStore({
         icon: "mdi:linkedin",
         arrow: "ph:arrow-up-right-thin",
       },
-      ,
     ] as IConnect[],
   }),
 
