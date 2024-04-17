@@ -80,10 +80,14 @@ onUnmounted(() => {
     .header__logo {
       display: flex;
       align-items: center;
+      width: 25px;
+      height: 25px;
 
       .header__icon {
         display: flex;
         align-items: center;
+        height: 25px;
+        width: 25px;
       }
     }
 
