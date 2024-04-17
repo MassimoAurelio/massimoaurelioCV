@@ -9,7 +9,8 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "lint": "eslint .",
-    "format": "eslint . --fix"
+    "format": "eslint . --fix",
+    "build-only": "nuxt build-only"
   },
   "dependencies": {
     "@antfu/eslint-config": "^2.12.1",
