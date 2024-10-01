@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import ToggleTheme from "./ToggleTheme.vue";
-/* import MobileHeaderLink from "../MobileHeaderLinks.vue"; */
 
 const windowWidth = ref<number | null>(null);
 

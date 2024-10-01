@@ -22,12 +22,6 @@ export const useConnect = defineStore({
         arrow: "ph:arrow-up-right-thin",
       },
       {
-        name: "Instagram",
-        href: "/",
-        icon: "bi:instagram",
-        arrow: "ph:arrow-up-right-thin",
-      },
-      {
         name: "GitHub",
         href: "https://github.com/MassimoAurelio",
         icon: "mdi:github",
@@ -40,8 +34,14 @@ export const useConnect = defineStore({
         arrow: "ph:arrow-up-right-thin",
       },
       {
+        name: "LeetCode",
+        href: "https://leetcode.com/u/massimoaureliowork/",
+        icon: "cib:leetcode",
+        arrow: "ph:arrow-up-right-thin",
+      },
+      {
         name: "LinkedIn",
-        href: "/",
+        href: "https://www.linkedin.com/in/massimoaurelio/",
         icon: "mdi:linkedin",
         arrow: "ph:arrow-up-right-thin",
       },

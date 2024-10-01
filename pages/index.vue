@@ -13,10 +13,9 @@ useSeoMeta({
     <div class="about__description">
       <h1>Massimo Aurelio</h1>
       <p class="p_description">
-        Hello, I'm Maxim, currently residing in Irkutsk, Russia. My professional
-        focus is on automation testing, utilizing Java, Selenium, and
-        Playwright. In my leisure time, I concentrate on front-end development,
-        aiming to transition from automation to front-end development.
+        Hello, I'm Maxim, currently residing in Bangkok, Thailand. My professional focus is on automation testing, where
+        I utilize Java, Selenium, and Playwright. In my leisure time, I concentrate on front-end development, with the
+        aim of transitioning from automation to full-stack development.
       </p>
     </div>
   </div>

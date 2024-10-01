@@ -25,6 +25,7 @@ export const useStackStore = defineStore({
   state: () => ({
     items: [
       { name: "JavaScript", img: "cib:js" },
+      { name: "Socket io", img: "cib:socket-io" },
       { name: "TypeScript", img: "cib:typescript" },
       { name: "HTML", img: "ic:baseline-html" },
       { name: "CSS", img: "ic:round-css" },
@@ -38,3 +39,17 @@ export const useStackStore = defineStore({
     ] as IStack[],
   }),
 });
+
+export const useBackStackStore = defineStore({
+  id: "back",
+  state: () => ({
+    items: [
+      { name: "JavaScript", img: "cib:js" },
+      { name: "TypeScript", img: "cib:typescript" },
+      { name: "Nest", img: "simple-icons:nestjs" },
+      { name: "Prisma ORM", img: "simple-icons:prisma" },
+      { name: "Postgresql", img: "cib:postgresql" },
+      { name: "Socket io", img: "cib:socket-io" },
+    ] as IStack[],
+  }),
+})

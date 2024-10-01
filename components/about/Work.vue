@@ -9,16 +9,11 @@ const workStore = useWorkStore();
     <h1 class="Work__header">Work</h1>
     <div class="Work__description">
       <p>
-        I specialize in Java and JavaScript, testing, Vue(Nuxt), web
-        development, user interface, and product design. But I'm always learning
-        something new. Here are some of the places where I have worked
+        I specialize in Java and JavaScript, testing, Vue(Nuxt), Nest, web development, user interfaces, and product
+        design. But I am always eager to learn something new. Here are some of the places where I have worked.
       </p>
       <ul class="Work__list">
-        <li
-          v-for="item in workStore?.items"
-          :key="item?.img"
-          class="Work__item"
-        >
+        <li v-for="item in workStore?.items" :key="item?.img" class="Work__item">
           <a class="Work__link" :href="item?.url" target="_blank">
             <div class="Work__container">
               <div class="Work__img">
@@ -73,11 +68,13 @@ const workStore = useWorkStore();
           display: flex;
           align-items: center;
           gap: 2vh;
+
           .Work__img {
             width: 48px;
             height: 48px;
             overflow: hidden;
           }
+
           .Work__img img {
             width: 100%;
             height: 100%;

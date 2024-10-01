@@ -3,7 +3,7 @@
     <h1 class="about">About</h1>
     <div class="about_text">
       <p>
-        Hello, I'm Maxim, currently residing in Irkutsk. I have been engaged in
+        Hello, I'm Maxim, currently residing in Bangkok. I have been engaged in
         programming for the past two years. As a programmer, my expertise lies
         in web development and automated testing.
       </p>
