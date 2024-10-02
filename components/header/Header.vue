@@ -43,7 +43,7 @@ onUnmounted(() => {
       <nav class="header__navigate">
         <div class="header__logo">
           <a href="/" class="header__icon">
-            <NuxtImg src="/headerIcon.png" sizes="25" />
+            <Icon name="fontisto:maxcdn" size="28" />
           </a>
         </div>
 
@@ -66,6 +66,7 @@ onUnmounted(() => {
 [v-cloak] {
   display: none;
 }
+
 .header {
   width: 100%;
 
