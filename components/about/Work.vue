@@ -41,6 +41,7 @@ const workStore = useWorkStore();
 
   .Work__description {
     min-width: 150px;
+    
     display: flex;
     flex-direction: column;
     gap: 2.25rem;
