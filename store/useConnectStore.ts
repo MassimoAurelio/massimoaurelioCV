@@ -11,7 +11,7 @@ export const useConnect = defineStore({
     items: [
       {
         name: "Gmail",
-        href: "/",
+        href: "https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=massimoaureliowork@gmail.com",
         icon: "lets-icons:message",
         arrow: "ph:arrow-up-right-thin",
       },
